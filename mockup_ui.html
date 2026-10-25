@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup UI Airtable — Sistem Data Mahasiswa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#faf5e8',
+            cream: '#f4ede0',
+            onyx: '#181d26',
+            onyxHover: '#262d3a',
+            borderTone: '#e6decb',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-parchment text-onyx min-h-screen flex flex-col font-sans antialiased">
+  <nav class="bg-parchment border-b border-borderTone px-6 py-3.5 flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg bg-onyx text-parchment flex items-center justify-center font-bold text-sm">SDM</span>
+      <span class="font-bold text-lg tracking-tight">Sistem Data Mahasiswa</span>
+      <span class="text-xs px-2.5 py-0.5 rounded-full bg-cream border border-borderTone font-mono text-[#706a5e]">Airtable UI</span>
+    </div>
+    <div class="flex items-center gap-2.5">
+      <button class="text-sm font-semibold bg-onyx text-parchment px-4 py-1.5 rounded-md shadow-xs">+ Tambah Data</button>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 md:p-8 space-y-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight">Data Induk Mahasiswa</h1>
+        <p class="text-sm text-[#706a5e]">Tampilan Airtable Parchment Cream #faf5e8 dengan border tipis dan tombol Onyx #181d26.</p>
+      </div>
+    </div>
+
+    <div class="bg-parchment border border-borderTone rounded-xl overflow-hidden shadow-xs">
+      <table class="w-full text-left border-collapse text-sm">
+        <thead>
+          <tr class="bg-cream border-b border-borderTone text-xs uppercase text-[#524d43] font-semibold tracking-wider">
+            <th class="py-3 px-4 w-12 text-center">No</th>
+            <th class="py-3 px-3 w-16">Foto</th>
+            <th class="py-3 px-4">Nama Lengkap</th>
+            <th class="py-3 px-4">NIM</th>
+            <th class="py-3 px-4">Program Studi</th>
+            <th class="py-3 px-4">Gender</th>
+            <th class="py-3 px-4">Kontak</th>
+            <th class="py-3 px-4 text-right">Aksi</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-borderTone">
+          <tr class="hover:bg-cream/50 transition">
+            <td class="py-3.5 px-4 text-center font-mono text-xs">1</td>
+            <td class="py-3.5 px-3">
+              <div class="w-10 h-10 rounded-md bg-cream border border-borderTone flex items-center justify-center font-bold text-xs">AR</div>
+            </td>
+            <td class="py-3.5 px-4 font-semibold">Arjuna<div class="text-xs text-[#706a5e] font-normal">Jl. Merdeka No. 10, Surakarta</div></td>
+            <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded bg-cream border border-borderTone font-mono text-xs font-semibold">26</span></td>
+            <td class="py-3.5 px-4">S1 Teknik Informatika</td>
+            <td class="py-3.5 px-4">Laki-laki</td>
+            <td class="py-3.5 px-4"><div>arjuna@email.com</div><div class="font-mono text-xs text-[#706a5e]">081234567890</div></td>
+            <td class="py-3.5 px-4 text-right">
+              <span class="px-2.5 py-1 text-xs font-semibold rounded bg-cream border border-borderTone">Edit</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+
